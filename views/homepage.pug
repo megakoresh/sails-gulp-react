@@ -1,0 +1,11 @@
+extends ./layout
+
+block body
+  h3 I did it!
+  p: a(data-open='exampleModal1') Click me for a modal
+  p: a(data-open='richEditor') Click me for a modal with react component!
+  #exampleModal1.reveal(data-reveal)
+    h3 Hurrah!
+    button.close-button(data-close='', aria-label='Close reveal', type='button')
+      span(aria-hidden='true') ×
+  #editor

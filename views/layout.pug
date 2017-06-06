@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    if locals.title
+      title= title
+    else
+      title New Sails App
+
+    // Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(charset="utf-8")
+    //- STYLES
+    link(rel="stylesheet", href="/styles/importer.css")
+    //- END STYLES
+    block styles
+
+  body
+    block body
+
+    //- TEMPLATES
+    script(src="/jst-pug.js")
+    //- END TEMPLATES
+
+    //- SCRIPTS
+    script(src="/js/dependencies/sails.io.js")
+    script(src="/js/dependencies/libraries.min.js")
+    script(src="/js/importer.js")
+    //- END SCRIPTS
